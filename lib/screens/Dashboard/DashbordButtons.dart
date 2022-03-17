@@ -97,15 +97,10 @@ class _DashboardButtonsState extends State<DashboardButtons>
                   ),
                 ],
               ),
-
-               Row(
+              Row(
                 children: [
-                  userDashboardButton(
-                      context,
-                      "assets/DashboardIcons/faq9.svg",
-                      "FAQ's",
-                      FAQ(),
-                      16.0),
+                  userDashboardButton(context, "assets/DashboardIcons/faq9.svg",
+                      "FAQ's", FAQ(), 16.0),
                   userDashboardButton(
                     context,
                     "assets/DashboardIcons/about_us10.svg",
@@ -115,60 +110,6 @@ class _DashboardButtonsState extends State<DashboardButtons>
                   ),
                 ],
               ),
-              // Row(
-              //   children: [
-              //     Container(
-              //       margin: EdgeInsets.all(5),
-              //       child: Card(
-              //         shape: RoundedRectangleBorder(
-              //           borderRadius: BorderRadius.circular(10),
-              //         ),
-              //         elevation: 6,
-              //         child: InkWell(
-              //           onTap: () {
-              //             Navigator.push(
-              //               context,
-              //               MaterialPageRoute(
-              //                 builder: (context) {
-              //                   return FAQ();
-              //                 },
-              //               ),
-              //             );
-              //           },
-              //           child: Column(
-              //             children: [
-              //               Container(
-              //                 padding: EdgeInsets.all(16),
-
-              //                 margin: EdgeInsets.all(5),
-              //                 height: MediaQuery.of(context).size.height * 0.12,
-              //                 width: MediaQuery.of(context).size.width * 0.46,
-              //                 // width: MediaQuery.of(context).size.width * 0.3,
-              //                 // color: Colors.orange,
-              //                 // margin: EdgeInsets.all(25.0),
-              //                 child: SvgPicture.asset(
-              //                   "assets/DashboardIcons/faq9.svg",
-              //                   // color: Colors.orange,
-              //                 ),
-              //               ),
-              //               Padding(
-              //                 padding: const EdgeInsets.only(
-              //                     bottom: 8.0, left: 8.0, right: 8.0),
-              //                 child: Text(
-              //                   "FAQ's",
-              //                   style: TextStyle(
-              //                     fontSize: 17,
-              //                     fontWeight: FontWeight.bold,
-              //                   ),
-              //                 ),
-              //               )
-              //             ],
-              //           ),
-              //         ),
-              //       ),
-              //     ),
-              //   ],
-              // ),
             ],
           ),
         ),

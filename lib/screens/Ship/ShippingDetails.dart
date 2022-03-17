@@ -66,8 +66,9 @@ class _ShippingDetailsState extends State<ShippingDetails>
             Container(
               padding: EdgeInsets.all(20.0),
               margin: EdgeInsets.all(10),
-              decoration:
-                  BoxDecoration(borderRadius: BorderRadius.circular(10),),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+              ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -106,7 +107,7 @@ class _ShippingDetailsState extends State<ShippingDetails>
     );
   }
 
-Color primaryColor = Color(0xff0bb783);
+  Color primaryColor = Color(0xff0bb783);
 
   ThemeData themeData;
   @override
@@ -123,9 +124,7 @@ Color primaryColor = Color(0xff0bb783);
                 child: Theme(
                   data: ThemeData(primaryColor: primaryColor),
                   child: Stepper(
-                    controlsBuilder: (BuildContext context,
-                        {VoidCallback onStepContinue,
-                        VoidCallback onStepCancel}) {
+                    controlsBuilder: (BuildContext context, controlsDetails) {
                       return Row(
                         children: <Widget>[
                           Container(
@@ -141,10 +140,11 @@ Color primaryColor = Color(0xff0bb783);
                                     shape: RoundedRectangleBorder(
                                       borderRadius:
                                           new BorderRadius.circular(15.0),
-                                    
                                     ),
                                   ),
-                                  onPressed: _currentStep == 3 ? null:onStepContinue,
+                                  onPressed: _currentStep == 3
+                                      ? null
+                                      : controlsDetails.onStepContinue,
                                   child: Text(
                                     "Next",
                                     style: TextStyle(
@@ -178,8 +178,9 @@ Color primaryColor = Color(0xff0bb783);
                                           BorderSide(color: Colors.transparent),
                                     ),
                                   ),
-                                  onPressed:
-                                      _currentStep == 0 ? null : onStepCancel,
+                                  onPressed: _currentStep == 0
+                                      ? null
+                                      : controlsDetails.onStepCancel,
                                   child: Text(
                                     "Back",
                                     style: TextStyle(
@@ -348,10 +349,14 @@ Color primaryColor = Color(0xff0bb783);
                                 ),
                                 GestureDetector(
                                   onTap: () {
-                                    Navigator.push(context,
-                                        MaterialPageRoute(builder: (context) {
-                                      return BoxPreferences();
-                                    },),);
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) {
+                                          return BoxPreferences();
+                                        },
+                                      ),
+                                    );
                                   },
                                   child: Icon(
                                     LineAwesomeIcons.question_circle,
@@ -515,11 +520,12 @@ Color primaryColor = Color(0xff0bb783);
                             ? StepState.complete
                             : StepState.disabled,
                       ),
-
                       Step(
                         state: StepState.complete,
                         title: Text(""),
-                        content: Opacity(opacity: 0,),
+                        content: Opacity(
+                          opacity: 0,
+                        ),
                       )
                     ],
                   ),
@@ -722,11 +728,12 @@ Color primaryColor = Color(0xff0bb783);
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Container(
-                        margin: EdgeInsets.all(8),
-                        child: Text(
-                          "create new address?",
-                          style: TextStyle(fontWeight: FontWeight.w300),
-                        ),),
+                      margin: EdgeInsets.all(8),
+                      child: Text(
+                        "create new address?",
+                        style: TextStyle(fontWeight: FontWeight.w300),
+                      ),
+                    ),
                     Container(
                       margin: EdgeInsets.all(5),
                       child: FlutterSwitch(
@@ -750,11 +757,12 @@ Color primaryColor = Color(0xff0bb783);
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Container(
-                        margin: EdgeInsets.all(15),
-                        child: Text(
-                          "Is this residential?",
-                          style: TextStyle(fontWeight: FontWeight.w300),
-                        ),),
+                      margin: EdgeInsets.all(15),
+                      child: Text(
+                        "Is this residential?",
+                        style: TextStyle(fontWeight: FontWeight.w300),
+                      ),
+                    ),
                     Container(
                       margin: EdgeInsets.all(5),
                       child: FlutterSwitch(
@@ -814,11 +822,12 @@ Color primaryColor = Color(0xff0bb783);
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Container(
-                      margin: EdgeInsets.all(5),
-                      child: Text(
-                        "new address?",
-                        style: TextStyle(fontWeight: FontWeight.w300),
-                      ),),
+                    margin: EdgeInsets.all(5),
+                    child: Text(
+                      "new address?",
+                      style: TextStyle(fontWeight: FontWeight.w300),
+                    ),
+                  ),
                   Container(
                     margin: EdgeInsets.all(5),
                     child: FlutterSwitch(

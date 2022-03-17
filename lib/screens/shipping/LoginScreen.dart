@@ -35,7 +35,6 @@ class _LoginScreenState extends State<LoginScreen> {
       // Map data = {'UserName': email, 'Password': pass};
       var jsonResponse;
       UIBlock.block(
-      
         context,
         canDissmissOnBack: true,
         loadingTextWidget: Text(
@@ -257,7 +256,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                     focusedBorder: InputBorder.none,
                                     isDense: true,
                                     contentPadding: EdgeInsets.all(20),
-                                    // suffixIcon: 
+                                    // suffixIcon:
                                   ),
                                   autofocus: false,
                                   // textInputAction: TextInputAction.search,
@@ -316,12 +315,12 @@ class _LoginScreenState extends State<LoginScreen> {
                           padding: EdgeInsets.only(top: 16, bottom: 16),
                         ),
                         onPressed: () {
-                          signIn(emailController.text, passwordController.text);
-                          //           Navigator.of(context).pushAndRemoveUntil(
-                          // MaterialPageRoute(
-                          //   builder: (context) => HomeScreen(),
-                          // ),
-                          // (Route<dynamic> route) => false);
+                          // signIn(emailController.text, passwordController.text);
+                          Navigator.of(context).pushAndRemoveUntil(
+                              MaterialPageRoute(
+                                builder: (BuildContext context) => HomeScreen(),
+                              ),
+                              (Route<dynamic> route) => false);
                         },
                         child: Stack(
                           // overflow: Overflow.visible,

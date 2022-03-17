@@ -37,9 +37,11 @@ class _ShoppingRatingScreenState extends State<ShoppingRatingScreen> {
           onPressed: () => Navigator.of(context).pop(),
           icon: Icon(MdiIcons.chevronLeft),
         ),
-        title: Text("Status",
-            style: AppTheme.getTextStyle(themeData.textTheme.headline6,
-                fontWeight: 600),),
+        title: Text(
+          "Status",
+          style: AppTheme.getTextStyle(themeData.textTheme.headline6,
+              fontWeight: 600),
+        ),
       ),
       backgroundColor: themeData.backgroundColor,
       body: ListView(
@@ -47,8 +49,7 @@ class _ShoppingRatingScreenState extends State<ShoppingRatingScreen> {
           Theme(
             data: ThemeData(primaryColor: primaryColor),
             child: Stepper(
-              controlsBuilder: (BuildContext context,
-                  {VoidCallback onStepContinue, VoidCallback onStepCancel}) {
+              controlsBuilder: (BuildContext context, controlDetails) {
                 return Container();
               },
               currentStep: _currentStep,
@@ -63,53 +64,81 @@ class _ShoppingRatingScreenState extends State<ShoppingRatingScreen> {
                 Step(
                   isActive: true,
                   state: StepState.complete,
-                  title: Text('Order placed - 14 April',
-                      style: themeData.textTheme.bodyText1.merge(TextStyle(
+                  title: Text(
+                    'Order placed - 14 April',
+                    style: themeData.textTheme.bodyText1.merge(
+                      TextStyle(
                           color: themeData.colorScheme.onBackground,
-                          letterSpacing: 0.2),),),
+                          letterSpacing: 0.2),
+                    ),
+                  ),
                   content: SizedBox(
-                    child: Text("Order was received by seller",
-                        style: themeData.textTheme.subtitle2.merge(TextStyle(
-                            color: themeData.colorScheme.onBackground),),),
+                    child: Text(
+                      "Order was received by seller",
+                      style: themeData.textTheme.subtitle2.merge(
+                        TextStyle(color: themeData.colorScheme.onBackground),
+                      ),
+                    ),
                   ),
                 ),
                 Step(
                   isActive: true,
                   state: StepState.complete,
-                  title: Text('Payment confirmed - 14 april',
-                      style: themeData.textTheme.bodyText1.merge(TextStyle(
+                  title: Text(
+                    'Payment confirmed - 14 april',
+                    style: themeData.textTheme.bodyText1.merge(
+                      TextStyle(
                           color: themeData.colorScheme.onBackground,
-                          letterSpacing: 0.2),),),
+                          letterSpacing: 0.2),
+                    ),
+                  ),
                   content: SizedBox(
-                    child: Text("Pay via debit card",
-                        style: themeData.textTheme.subtitle2.merge(TextStyle(
-                            color: themeData.colorScheme.onBackground),),),
+                    child: Text(
+                      "Pay via debit card",
+                      style: themeData.textTheme.subtitle2.merge(
+                        TextStyle(color: themeData.colorScheme.onBackground),
+                      ),
+                    ),
                   ),
                 ),
                 Step(
                   isActive: true,
                   state: StepState.complete,
-                  title: Text('Processing - 16 April',
-                      style: themeData.textTheme.bodyText1.merge(TextStyle(
+                  title: Text(
+                    'Processing - 16 April',
+                    style: themeData.textTheme.bodyText1.merge(
+                      TextStyle(
                           color: themeData.colorScheme.onBackground,
-                          letterSpacing: 0.2),),),
+                          letterSpacing: 0.2),
+                    ),
+                  ),
                   content: SizedBox(
-                    child: Text("It may be take longer time than expected",
-                        style: themeData.textTheme.subtitle2.merge(TextStyle(
-                            color: themeData.colorScheme.onBackground),),),
+                    child: Text(
+                      "It may be take longer time than expected",
+                      style: themeData.textTheme.subtitle2.merge(
+                        TextStyle(color: themeData.colorScheme.onBackground),
+                      ),
+                    ),
                   ),
                 ),
                 Step(
                   isActive: true,
                   state: StepState.complete,
-                  title: Text('Delivered - 2:30 PM, 18 April',
-                      style: themeData.textTheme.bodyText1.merge(TextStyle(
+                  title: Text(
+                    'Delivered - 2:30 PM, 18 April',
+                    style: themeData.textTheme.bodyText1.merge(
+                      TextStyle(
                           color: themeData.colorScheme.onBackground,
-                          letterSpacing: 0.2),),),
+                          letterSpacing: 0.2),
+                    ),
+                  ),
                   content: SizedBox(
-                    child: Text("Today at 2:30 PM order has been delivered",
-                        style: themeData.textTheme.subtitle2.merge(TextStyle(
-                            color: themeData.colorScheme.onBackground),),),
+                    child: Text(
+                      "Today at 2:30 PM order has been delivered",
+                      style: themeData.textTheme.subtitle2.merge(
+                        TextStyle(color: themeData.colorScheme.onBackground),
+                      ),
+                    ),
                   ),
                 ),
                 // Step(
@@ -175,7 +204,10 @@ class _RatingDialogState extends State<RatingDialog> {
     ThemeData themeData = Theme.of(context);
     return Dialog(
       shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(MySize.size8),),),
+        borderRadius: BorderRadius.all(
+          Radius.circular(MySize.size8),
+        ),
+      ),
       child: Container(
         clipBehavior: Clip.antiAlias,
         decoration: BoxDecoration(
@@ -200,18 +232,22 @@ class _RatingDialogState extends State<RatingDialog> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
-                    Text("Enjoying product?",
-                        style: AppTheme.getTextStyle(
-                            themeData.textTheme.headline6,
-                            fontWeight: 700,
-                            letterSpacing: 0),),
+                    Text(
+                      "Enjoying product?",
+                      style: AppTheme.getTextStyle(
+                          themeData.textTheme.headline6,
+                          fontWeight: 700,
+                          letterSpacing: 0),
+                    ),
                     Container(
                       margin: EdgeInsets.only(top: MySize.size24),
-                      child: Text("How would you rate our service?",
-                          style: AppTheme.getTextStyle(
-                              themeData.textTheme.bodyText2,
-                              fontWeight: 500,
-                              letterSpacing: 0.3),),
+                      child: Text(
+                        "How would you rate our service?",
+                        style: AppTheme.getTextStyle(
+                            themeData.textTheme.bodyText2,
+                            fontWeight: 500,
+                            letterSpacing: 0.3),
+                      ),
                     ),
                     Container(
                       margin: EdgeInsets.only(top: MySize.size24),

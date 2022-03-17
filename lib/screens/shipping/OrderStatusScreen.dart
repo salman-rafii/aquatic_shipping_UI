@@ -6,8 +6,7 @@ import '../../AppTheme.dart';
 
 class OrderStatusScreen extends StatefulWidget {
   @override
-  _OrderStatusScreenState createState() =>
-      _OrderStatusScreenState();
+  _OrderStatusScreenState createState() => _OrderStatusScreenState();
 }
 
 class TextIconItem {
@@ -66,8 +65,9 @@ class _OrderStatusScreenState extends State<OrderStatusScreen> {
                       top: MySize.size8),
                   decoration: BoxDecoration(
                     color: themeData.cardTheme.color,
-                    borderRadius:
-                        BorderRadius.all(Radius.circular(MySize.size16),),
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(MySize.size16),
+                    ),
                     boxShadow: [
                       BoxShadow(
                         color: themeData.cardTheme.shadowColor.withAlpha(28),
@@ -124,10 +124,12 @@ class _OrderStatusScreenState extends State<OrderStatusScreen> {
                                           Padding(
                                             padding: EdgeInsets.only(
                                                 left: MySize.size8),
-                                            child: Text(choice.text,
-                                                style: AppTheme.getTextStyle(
-                                                    themeData
-                                                        .textTheme.bodyText2),),
+                                            child: Text(
+                                              choice.text,
+                                              style: AppTheme.getTextStyle(
+                                                  themeData
+                                                      .textTheme.bodyText2),
+                                            ),
                                           )
                                         ],
                                       ),
@@ -143,21 +145,27 @@ class _OrderStatusScreenState extends State<OrderStatusScreen> {
                             )
                           ],
                         ),
-                        Text("Paid",
-                            style: AppTheme.getTextStyle(
-                                themeData.textTheme.subtitle2,
-                                fontWeight: 600),),
+                        Text(
+                          "Paid",
+                          style: AppTheme.getTextStyle(
+                              themeData.textTheme.subtitle2,
+                              fontWeight: 600),
+                        ),
                         Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
-                            Text("Status : ",
-                                style: AppTheme.getTextStyle(
-                                    themeData.textTheme.subtitle2,
-                                    fontWeight: 500),),
-                            Text("On the way",
-                                style: AppTheme.getTextStyle(
-                                    themeData.textTheme.subtitle1,
-                                    fontWeight: 600),),
+                            Text(
+                              "Status : ",
+                              style: AppTheme.getTextStyle(
+                                  themeData.textTheme.subtitle2,
+                                  fontWeight: 500),
+                            ),
+                            Text(
+                              "On the way",
+                              style: AppTheme.getTextStyle(
+                                  themeData.textTheme.subtitle1,
+                                  fontWeight: 600),
+                            ),
                           ],
                         )
                       ],
@@ -169,7 +177,9 @@ class _OrderStatusScreenState extends State<OrderStatusScreen> {
                       EdgeInsets.only(bottom: 8, right: 12, left: 12, top: 8),
                   decoration: BoxDecoration(
                     color: themeData.cardTheme.color,
-                    borderRadius: BorderRadius.all(Radius.circular(16),),
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(16),
+                    ),
                     boxShadow: [
                       BoxShadow(
                         color: themeData.cardTheme.shadowColor.withAlpha(28),
@@ -223,10 +233,12 @@ class _OrderStatusScreenState extends State<OrderStatusScreen> {
                                             Padding(
                                               padding: EdgeInsets.only(
                                                   left: MySize.size8),
-                                              child: Text(choice.text,
-                                                  style: AppTheme.getTextStyle(
-                                                      themeData.textTheme
-                                                          .bodyText2),),
+                                              child: Text(
+                                                choice.text,
+                                                style: AppTheme.getTextStyle(
+                                                    themeData
+                                                        .textTheme.bodyText2),
+                                              ),
                                             )
                                           ],
                                         ),
@@ -243,21 +255,27 @@ class _OrderStatusScreenState extends State<OrderStatusScreen> {
                             )
                           ],
                         ),
-                        Text("Cash on Delivery",
-                            style: AppTheme.getTextStyle(
-                                themeData.textTheme.subtitle2,
-                                fontWeight: 600),),
+                        Text(
+                          "Cash on Delivery",
+                          style: AppTheme.getTextStyle(
+                              themeData.textTheme.subtitle2,
+                              fontWeight: 600),
+                        ),
                         Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
-                            Text("Status : ",
-                                style: AppTheme.getTextStyle(
-                                    themeData.textTheme.subtitle2,
-                                    fontWeight: 500),),
-                            Text("Delivered",
-                                style: AppTheme.getTextStyle(
-                                    themeData.textTheme.subtitle1,
-                                    fontWeight: 600),),
+                            Text(
+                              "Status : ",
+                              style: AppTheme.getTextStyle(
+                                  themeData.textTheme.subtitle2,
+                                  fontWeight: 500),
+                            ),
+                            Text(
+                              "Delivered",
+                              style: AppTheme.getTextStyle(
+                                  themeData.textTheme.subtitle1,
+                                  fontWeight: 600),
+                            ),
                           ],
                         )
                       ],
@@ -271,8 +289,9 @@ class _OrderStatusScreenState extends State<OrderStatusScreen> {
                       left: MySize.size12),
                   decoration: BoxDecoration(
                     color: themeData.cardTheme.color,
-                    borderRadius:
-                        BorderRadius.all(Radius.circular(MySize.size16),),
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(MySize.size16),
+                    ),
                     boxShadow: [
                       BoxShadow(
                         color: themeData.cardTheme.shadowColor.withAlpha(28),
@@ -282,13 +301,16 @@ class _OrderStatusScreenState extends State<OrderStatusScreen> {
                     ],
                   ),
                   child: Center(
-                    child: Text("VIEW ALL",
-                        style: AppTheme.getTextStyle(
-                            themeData.textTheme.subtitle1,
-                            fontWeight: 600,
-                            letterSpacing: 0.5,
-                            color: themeData.colorScheme.onBackground
-                                .withAlpha(200),),),
+                    child: Text(
+                      "VIEW ALL",
+                      style: AppTheme.getTextStyle(
+                        themeData.textTheme.subtitle1,
+                        fontWeight: 600,
+                        letterSpacing: 0.5,
+                        color:
+                            themeData.colorScheme.onBackground.withAlpha(200),
+                      ),
+                    ),
                   ),
                 ),
               ],
@@ -299,17 +321,18 @@ class _OrderStatusScreenState extends State<OrderStatusScreen> {
                 top: MySize.size24, left: MySize.size16, right: MySize.size16),
             child: Text(
               "STATUS",
-              style: AppTheme.getTextStyle(themeData.textTheme.subtitle2,
-                  fontWeight: 700,
-                  color: themeData.colorScheme.onBackground.withAlpha(200),),
+              style: AppTheme.getTextStyle(
+                themeData.textTheme.subtitle2,
+                fontWeight: 700,
+                color: themeData.colorScheme.onBackground.withAlpha(200),
+              ),
             ),
           ),
           Theme(
             data: ThemeData(primaryColor: primaryColor),
             child: Stepper(
               physics: ClampingScrollPhysics(),
-              controlsBuilder: (BuildContext context,
-                  {VoidCallback onStepContinue, VoidCallback onStepCancel}) {
+              controlsBuilder: (BuildContext context, controlDetails) {
                 return Container();
               },
               currentStep: _currentStep,
@@ -324,69 +347,82 @@ class _OrderStatusScreenState extends State<OrderStatusScreen> {
                 Step(
                   isActive: true,
                   state: StepState.complete,
-                  title: Text('Order placed - 14 April',
-                      style: AppTheme.getTextStyle(
-                          themeData.textTheme.bodyText1,
-                          fontWeight: 600),),
-                  content: Text("Order was received by seller",
-                      style: AppTheme.getTextStyle(
-                          themeData.textTheme.subtitle2,
-                          fontWeight: 500),),
-                ),
-                Step(
-                  isActive: true,
-                  state: StepState.complete,
-                  title: Text('Payment confirmed - 14 april',
-                      style: AppTheme.getTextStyle(
-                          themeData.textTheme.bodyText1,
-                          fontWeight: 500),),
-                  content: SizedBox(
-                    child: Text("Pay via debit card",
-                        style: AppTheme.getTextStyle(
-                            themeData.textTheme.subtitle2,
-                            fontWeight: 500),),
+                  title: Text(
+                    'Order placed - 14 April',
+                    style: AppTheme.getTextStyle(themeData.textTheme.bodyText1,
+                        fontWeight: 600),
+                  ),
+                  content: Text(
+                    "Order was received by seller",
+                    style: AppTheme.getTextStyle(themeData.textTheme.subtitle2,
+                        fontWeight: 500),
                   ),
                 ),
                 Step(
                   isActive: true,
                   state: StepState.complete,
-                  title: Text('Processing - 16 April',
-                      style: AppTheme.getTextStyle(
-                          themeData.textTheme.bodyText1,
-                          fontWeight: 600),),
-                  content: SizedBox(
-                    child: Text("It may be take longer time than expected",
-                        style: AppTheme.getTextStyle(
-                            themeData.textTheme.subtitle2,
-                            fontWeight: 500),),
+                  title: Text(
+                    'Payment confirmed - 14 april',
+                    style: AppTheme.getTextStyle(themeData.textTheme.bodyText1,
+                        fontWeight: 500),
                   ),
-                ),
-                Step(
-                  isActive: true,
-                  state: StepState.indexed,
-                  title: Text('On the way',
-                      style: AppTheme.getTextStyle(
-                          themeData.textTheme.bodyText1,
-                          fontWeight: 600),),
                   content: SizedBox(
                     child: Text(
-                        "Jenifer picked your order, you can contact her anytime",
-                        style: AppTheme.getTextStyle(
-                            themeData.textTheme.subtitle2,
-                            fontWeight: 500),),
+                      "Pay via debit card",
+                      style: AppTheme.getTextStyle(
+                          themeData.textTheme.subtitle2,
+                          fontWeight: 500),
+                    ),
+                  ),
+                ),
+                Step(
+                  isActive: true,
+                  state: StepState.complete,
+                  title: Text(
+                    'Processing - 16 April',
+                    style: AppTheme.getTextStyle(themeData.textTheme.bodyText1,
+                        fontWeight: 600),
+                  ),
+                  content: SizedBox(
+                    child: Text(
+                      "It may be take longer time than expected",
+                      style: AppTheme.getTextStyle(
+                          themeData.textTheme.subtitle2,
+                          fontWeight: 500),
+                    ),
+                  ),
+                ),
+                Step(
+                  isActive: true,
+                  state: StepState.indexed,
+                  title: Text(
+                    'On the way',
+                    style: AppTheme.getTextStyle(themeData.textTheme.bodyText1,
+                        fontWeight: 600),
+                  ),
+                  content: SizedBox(
+                    child: Text(
+                      "Jenifer picked your order, you can contact her anytime",
+                      style: AppTheme.getTextStyle(
+                          themeData.textTheme.subtitle2,
+                          fontWeight: 500),
+                    ),
                   ),
                 ),
                 Step(
                   state: StepState.indexed,
-                  title: Text('Deliver',
-                      style: AppTheme.getTextStyle(
-                          themeData.textTheme.bodyText1,
-                          fontWeight: 600),),
+                  title: Text(
+                    'Deliver',
+                    style: AppTheme.getTextStyle(themeData.textTheme.bodyText1,
+                        fontWeight: 600),
+                  ),
                   content: SizedBox(
-                    child: Text("Today at 2:30 PM order has been deliver",
-                        style: AppTheme.getTextStyle(
-                            themeData.textTheme.subtitle2,
-                            fontWeight: 500),),
+                    child: Text(
+                      "Today at 2:30 PM order has been deliver",
+                      style: AppTheme.getTextStyle(
+                          themeData.textTheme.subtitle2,
+                          fontWeight: 500),
+                    ),
                   ),
                 ),
               ],
